@@ -1,6 +1,6 @@
 ![image](https://github.com/Bae-ChangHyun/Forestfire-predict/assets/48899047/fccf0208-360a-44be-a689-2bc5ff35978b)
 
-# Forestfire_prediction
+# Forestfire prediction
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict%2Fblob%2Fmain%2FREADME.md&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 개발기간: <br>
