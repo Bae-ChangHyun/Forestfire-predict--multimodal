@@ -18,6 +18,7 @@ train_model.py의 총 실행시간은 대략 2일정도 걸립니다. <br>
 `train_model.py`의 경우 실행후, 아무것도 입력할 필요없으며, <br>
 `test_model.py`의 경우 실행 후, prompt에 안내되는 형식에 따라 input 숫자를 입력하면 됩니다. <br>
 (과거시점의 경우 입력되는 날짜, 시간의 산불발생확률맵을 저장, <br> 미래시점(오늘+2일내)의 경우 입력되는 날짜 이후 1시간30,2시간30,3시간30분 뒤의 산불발생확률맵을 저장) <br>
+
 ```python
 pip install -r requirements.txt
 python train_model.py
