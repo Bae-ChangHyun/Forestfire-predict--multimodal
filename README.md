@@ -32,4 +32,16 @@ pip install -r requirements.txt
 python train_model.py
 python test_model.py
 ```
+<div align=center><h1>📚 STACKS</h1></div>
 
+<div align=center> 
+  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/tensorflow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white">
+  <br>
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <br>
+  <img src="https://img.shields.io/badge/qgis-589632?style=for-the-badge&logo=qgis&logoColor=white">
+  <img src="https://img.shields.io/badge/gdal-5CAE58?style=for-the-badge&logo=gdal&logoColor=white">
+  <br>
+</div>
