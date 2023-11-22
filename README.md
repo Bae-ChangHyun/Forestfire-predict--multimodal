@@ -4,6 +4,7 @@
 강원도의 산불 발생 확률을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.
 
 2. 사전 준비 <br>
+
 아래 구글드라이브에서 두 파일을 다운로드 후, <br>
 [raw파일다운로드](https://drive.google.com/file/d/1Kew7kQTDRqo_X_-T-rW06XjGvHvlBEMm/view?usp=drive_link) / 
 [asos파일다운로드](https://drive.google.com/file/d/1KfERjVehpwHckMcY6gKZHB8tRyKIegVM/view?usp=drive_link)  <br>
