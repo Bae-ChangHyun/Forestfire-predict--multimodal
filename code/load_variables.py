@@ -22,6 +22,7 @@ def load_env():
         exit()
         
     image_size = os.getenv("imagesize")
+    image_size=int(image_size)
     
 
     return api_key,root_path,db_path,image_size

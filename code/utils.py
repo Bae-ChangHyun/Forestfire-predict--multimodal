@@ -46,11 +46,11 @@ def idw_interpoloate(data_n, o_data):
     weather_data.dropna(subset=['time'], inplace=True)
     weather_data['rainfall'] = weather_data['rainfall'].fillna(0)  # 강수가 비어있는건 0으로 채움
 
-    file_count = len(os.listdir(filepath+features[3]))
+    file_count = len(os.listdir(filepath+features[0]))
     if (file_count == len(o_data)):
         print("--> Data is already existed.")
         return
-    else:start = file_count  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
+    else:start = file_count-1  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
 
     for i in tqdm(range(start, len(o_data))):
         tmp = weather_data[weather_data['num'] == i]
@@ -171,7 +171,7 @@ def find_fireloc(data_n, o_data):
     if (file_count == len(o_data)):
         print("--> Data is already existed.")
         return
-    else:start = file_count  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
+    else:start = file_count-1  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
 
     if (len(glob(filepath + '/*'))) == 0:
         for i in tqdm(range(start, len(o_data))):

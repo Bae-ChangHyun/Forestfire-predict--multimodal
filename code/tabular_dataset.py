@@ -127,23 +127,22 @@ def collect_climate(data_n, o_data, method):
         return
     else:
         start = file_count
+        print(f"Continuing collect data at {start}")
 
     # this method is using downloaded asos csv file (pre download required)
     if method == 1:
-        for i in tqdm(range(len(o_data))):
+        for i in tqdm(range(start-1,len(o_data))):
             tmp = pd.DataFrame(columns=['num', 'loc_info', 'lon', 'lat', 'time', 'humidity', 'wind_sp', 'rainfall', 'temp'])
             for j in range(len(loc_list)):
                 new_data = [i, loc_list[j], loc_data['lon'][j], loc_data['lat'][j]]
                 new_data.extend(asos_crawling(o_data['input'][i], loc_list[j]))
                 tmp = pd.concat([tmp, pd.DataFrame([new_data], columns=tmp.columns)], ignore_index=True)
-            tmp.to_csv(
-                f"{data_dir}data_{i}.csv", encoding='cp949', index=False)
+            tmp.to_csv(f"{data_dir}data_{i}.csv", encoding='cp949', index=False)
     # this method is crawling data ny using api
     elif method == 2:
-        for i in tqdm(range(start, len(o_data))):
+        for i in tqdm(range(start-1, len(o_data))):
             year = o_data['input'][i][:4]
-            df_asos_hr = pd.read_csv(
-                f'{root_path}/data/ASOS_Hr/ASOS_Hr_{year}.csv', low_memory=False)
+            df_asos_hr = pd.read_csv(f'{root_path}/data/ASOS_Hr/ASOS_Hr_{year}.csv', low_memory=False)
             date = datetime.strptime(o_data['input'][i], "%Y%m%d%H")
             date = date.strftime("%Y-%m-%d %H:%M")
 
@@ -158,9 +157,7 @@ def collect_climate(data_n, o_data, method):
             df_asos_hr.columns = ['num', 'loc_info', 'lon', 'lat','time', 'humidity', 'wind_sp', 'rainfall', 'temp']
             df_asos_hr.to_csv(f'{data_dir}/data_{i}.csv', encoding='cp949', index=False)
             tmp = pd.read_csv(f"{data_dir}data_{i}.csv", encoding='cp949')
-            result.append(tmp)
-            
-    weather_data = pd.concat(result, ignore_index=True)
+    weather_data = pd.concat(map(pd.read_csv, glob(f"{root_path}/data/data_set({data_n})/climate_data/*.csv")), ignore_index=True)       
     weather_data.to_csv(f"{root_path}/data/data_set({data_n})/{data_n}_climate.csv",encoding='cp949', index=False)
     print("Complete")
 
@@ -355,6 +352,7 @@ if __name__ == "__main__":
     nofire_dataset=main("nofire")
     nofire_dataset['target']=0
     final_dataset=pd.concat([fire_dataset,nofire_dataset],axis=0,ignore_index=True)
-    final_dataset.drop(['lon', 'lat'],axis=1,inplace=True)
+    #final_dataset.drop(['lon', 'lat'],axis=1,inplace=True)
     final_dataset=final_dataset.replace(32767.0,-9999)
+    os.makedirs(f"{root_path}/data/modeling/", exist_ok=True)
     final_dataset.to_csv(f"{root_path}/data/modeling/climate_train.csv",index=False)

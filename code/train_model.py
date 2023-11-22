@@ -37,6 +37,7 @@ subprocess.run(['python', 'image_dataset.py'])
 
 def load_dataset():
     climate_train=pd.read_csv(f'{root_path}/data/modeling/climate_train.csv')
+    climate_train.drop(['lon', 'lat'],axis=1,inplace=True)
     x,y=[],[]
     for j in tqdm(range(len(climate_train))):
         x.append(np.array(climate_train.loc[j, ['humidity', 'rainfall', 'temp', 'windspeed']]).astype(float))
