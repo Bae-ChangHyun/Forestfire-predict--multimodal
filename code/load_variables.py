@@ -21,7 +21,7 @@ def load_env():
         print("Please set db path path on env.json")
         exit()
         
-    image_size = os.getenv("imagesize")
+    image_size = os.getenv("image_size")
     image_size=int(image_size)
     
 

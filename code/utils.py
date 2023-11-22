@@ -50,7 +50,9 @@ def idw_interpoloate(data_n, o_data):
     if (file_count == len(o_data)):
         print("--> Data is already existed.")
         return
-    else:start = file_count-1  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
+    else:
+        start = file_count-1  # 데이터가 일부만 있을 때 중간부터 시작하기 위해서.
+        print(f"Continuing interpolation at {start}")
 
     for i in tqdm(range(start, len(o_data))):
         tmp = weather_data[weather_data['num'] == i]

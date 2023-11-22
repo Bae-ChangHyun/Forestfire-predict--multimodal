@@ -45,7 +45,8 @@ def load_dataset():
     climate = np.array(x)
     y = np.array(y)
     return climate,y
-    
+
+# not used    
 def residual_block(input_layer, filters, kernel_size):
     x = Conv2D(filters, kernel_size, padding='same')(input_layer)
     x = Conv2D(filters, kernel_size, padding='same')(x)
@@ -56,7 +57,7 @@ def residual_block(input_layer, filters, kernel_size):
     x = Add()([input_layer, x])
     x = Activation('relu')(x)
     return x
-
+# not used    
 def res_layers(input_layer):
     x = Conv2D(64, (3, 3), strides=(1, 1), padding='same')(input_layer)
     x = MaxPooling2D((2, 2), strides=(2, 2), padding='same')(x)
