@@ -8,23 +8,23 @@
 `개인`(2023.05 ~ 2023.11)
 
 ### 1. Subject <br>
-대한민국 강원도의 산불 발생 확률을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.<br>
-기상 데이터는 tabular 데이터로, 지형과 인적데이터는 image 데이터로 구성하여, 멀티모달 학습방식을 사용.<br>
+대한민국 강원도의 산불 발생 확률(0~1)을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.<br>
+기상 데이터는 tabular 데이터로, 지형과 인적데이터는 image 데이터로 구성하여, 멀티모달 학습방식을 사용하여 모델 학습.<br>
 
-기상데이터: 기온,습도,풍속,강수량<br>
-지형데이터: 고도, 경사도, NDVI<br>
-인적데이터: 인구밀도, 토지이용도<br>
+- 기상데이터: 기온,습도,풍속,강수량<br>
+- 지형데이터: 고도, 경사도, NDVI<br>
+- 인적데이터: 인구밀도, 토지이용도<br>
 
 ### 2. Installation <br>
 
-아래 구글드라이브에서 두 파일을 다운로드 후, <br>
+아래 구글드라이브에서 두 파일을 다운로드 후, [wiki](https://github.com/Bae-ChangHyun/Forestfire-predict/wiki/Simple-Code-discription)에 기재되어 있는 사전준비를 미리 해놔야 코드가 오류없이 돌아간다.<br>
 [raw파일다운로드](https://drive.google.com/file/d/1Kew7kQTDRqo_X_-T-rW06XjGvHvlBEMm/view?usp=drive_link) / 
 [asos파일다운로드](https://drive.google.com/file/d/1KfERjVehpwHckMcY6gKZHB8tRyKIegVM/view?usp=drive_link)  <br>
-[wiki](https://github.com/Bae-ChangHyun/Forestfire-predict/wiki/Simple-Code-discription)에 기재되어 있는 사전준비를 미리 해놔야 코드가 오류없이 돌아간다.
-또한 데이터의 용량이 크기 때문에 용량이 넓은 드라이브에 디렉토리 설정을 하는 것을 추천한다.
+
+! 데이터의 용량이 크기 때문에 작업 디렉토리를 용량이 넓은 드라이브에 설정 하는 것을 추천한다.
 
 ### 3. Run <br>
-`train_model.py`의 총 실행시간은 대략 2일정도 걸립니다. <br>
+`train_model.py`(데이터 수집 및 모델 학습)의 총 실행시간은 대략 2일정도 걸립니다. <br>
 단, 멈췄다가 재시작할시 이전 중단지점부터 다시 시작하기 때문에 멈췄다가 다시 실행하여도 상관없습니다. <br>
 
 `train_model.py`의 경우 실행후, 아무것도 입력할 필요없으며, <br>
