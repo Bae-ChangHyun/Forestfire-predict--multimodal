@@ -1,4 +1,5 @@
-![image](https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/assets/48899047/c0e56db9-ca21-415a-9e0d-57f080e6922a)
+![image](https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/assets/48899047/65286b54-2d8b-462e-96c5-c481ee85d314)
+
 
 
 # Forestfire prediction
