@@ -2,6 +2,10 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict%2Fblob%2Fmain%2FREADME.md&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
+개발기간: <br>
+`공동`(2023.01 ~ 2023.05) <br>
+`개인`(2023.05 ~ 2023.11)
+
 ### 1. 프로젝트의 목적 <br>
 강원도의 산불 발생 확률을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.
 
