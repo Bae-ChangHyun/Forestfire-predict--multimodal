@@ -13,7 +13,7 @@
 - 지형데이터: 고도, 경사도, NDVI<br>
 - 인적데이터: 인구밀도, 토지이용도<br>
 
-프로젝트 회고 -> [블로그](https://changsroad.tistory.com/)
+프로젝트 회고 -> [블로그](https://changsroad.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%82%B0%EB%B6%88%20%EB%B0%9C%EC%83%9D%20%EC%98%88%EC%B8%A1))
 
 ### 2. Installation <br>
 
