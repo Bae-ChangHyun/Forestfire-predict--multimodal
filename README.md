@@ -1,6 +1,7 @@
 # Forestfire prediction project
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict%2Fblob%2Fmain%2FREADME.md&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/Bae-ChangHyun/https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict--multimodal">
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict%2Fblob%2Fmain%2FREADME.md&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) <br>
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/Bae-ChangHyun/Forestfire-predict--multimodal">
+
 
 
 
