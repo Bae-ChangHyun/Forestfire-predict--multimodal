@@ -1,6 +1,7 @@
 ### 
-ASOS_Hr.zip
-raw.zip
+data/ASOS_Hr.zip
+data/raw.zip
+산불발생확률에측.docx
 
 ## JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
@@ -205,3 +206,4 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks
+.gitignore
