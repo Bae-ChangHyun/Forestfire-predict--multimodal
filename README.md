@@ -40,6 +40,11 @@ pip install -r requirements.txt
 python train_model.py
 python test_model.py
 ```
+### 4. Result <br>
+![image](https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/assets/48899047/a5336b36-6114-4da3-9316-51624fac2c19)
+
+
+
 <div align=center><h1>📚 STACKS</h1></div>
 
 <div align=center> 
