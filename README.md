@@ -21,11 +21,12 @@
 
 ### 2. Installation <br>
 
-아래 구글드라이브에서 두 파일을 다운로드 후, [wiki](https://github.com/Bae-ChangHyun/Forestfire-predict/wiki/Simple-Code-discription)에 기재되어 있는 사전준비를 미리 해놔야 코드가 오류없이 돌아간다.<br>
+아래 구글드라이브에서 두 파일을 다운로드 후, [wiki](https://github.com/Bae-ChangHyun/Forestfire-predict/wiki/Simple-Code-discription)에 기재되어 있는 사전준비를 미리 해놔야 코드가 오류없이 돌아갑니다.<br>
+또한 설정된 파일 경로와 파일명을 임의로 바꾸면 안됩니다. <br>
 [raw파일다운로드](https://drive.google.com/file/d/1Kew7kQTDRqo_X_-T-rW06XjGvHvlBEMm/view?usp=drive_link) / 
 [asos파일다운로드](https://drive.google.com/file/d/1KfERjVehpwHckMcY6gKZHB8tRyKIegVM/view?usp=drive_link)  <br>
 
-! 데이터의 용량이 크기 때문에 작업 디렉토리를 용량이 넓은 드라이브에 설정 하는 것을 추천한다.
+! 데이터의 용량이 크기 때문에 작업 디렉토리를 용량이 넓은 드라이브에 설정 하는 것을 추천합니다
 
 ### 3. Run <br>
 `train_model.py`(데이터 수집 및 모델 학습)의 총 실행시간은 대략 2일정도 걸립니다. <br>
@@ -33,7 +34,7 @@
 
 `train_model.py`의 경우 실행후, 아무것도 입력할 필요없으며, <br>
 `test_model.py`의 경우 실행 후, prompt에 안내되는 형식에 따라 input 숫자를 입력하면 됩니다. <br>
-(과거시점의 경우 입력되는 날짜, 시간의 산불발생확률맵을 저장, <br> 미래시점(오늘+2일내)의 경우 입력되는 날짜 이후 1시간30분, 2시간 30분, 3시간30분 뒤의 산불발생확률맵을 저장) <br>
+(과거시점의 경우 입력되는 날짜/시간의 산불발생확률맵을 생성, <br> 미래시점(오늘+2일내)의 경우 입력되는 날짜 이후 1시간30분, 2시간 30분, 3시간30분 뒤의 산불발생확률맵을 생) <br>
 
 ```python
 pip install -r requirements.txt
