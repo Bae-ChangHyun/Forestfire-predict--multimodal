@@ -11,13 +11,13 @@
 
 ### 1. Subject <br>
 대한민국 강원도의 산불 발생 확률(0~1)을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.<br>
-기상 데이터는 tabular 데이터로, 지형과 인적데이터는 image 데이터로 구성하여, 멀티모달 학습방식을 사용하여 모델 학습.<br>
+기상 데이터는 tabular 데이터로, 지형과 인적데이터는 image 데이터로 구성하여,<br> 멀티모달 학습방식을 사용하여 모델 학습.<br>
 
 - 기상데이터: 기온,습도,풍속,강수량<br>
 - 지형데이터: 고도, 경사도, NDVI<br>
 - 인적데이터: 인구밀도, 토지이용도<br>
 
-프로젝트 회고 -> [블로그](https://changsroad.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%82%B0%EB%B6%88%20%EB%B0%9C%EC%83%9D%20%EC%98%88%EC%B8%A1))
+프로젝트 회고 -> [블로그](https://changsroad.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%82%B0%EB%B6%88%20%EB%B0%9C%EC%83%9D%20%EC%98%88%EC%B8%A1)
 
 ### 2. Installation <br>
 
