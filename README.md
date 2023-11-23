@@ -13,6 +13,8 @@
 - 지형데이터: 고도, 경사도, NDVI<br>
 - 인적데이터: 인구밀도, 토지이용도<br>
 
+프로젝트 회고 -> [블로그](https://changsroad.tistory.com/)
+
 ### 2. Installation <br>
 
 아래 구글드라이브에서 두 파일을 다운로드 후, [wiki](https://github.com/Bae-ChangHyun/Forestfire-predict/wiki/Simple-Code-discription)에 기재되어 있는 사전준비를 미리 해놔야 코드가 오류없이 돌아간다.<br>
