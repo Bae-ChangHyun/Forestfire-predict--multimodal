@@ -8,6 +8,9 @@
 개발기간: <br>
 `2023.05 ~ 2023.11`
 
+wiki: <br>
+[Wiki](https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/wiki)
+
 ### 1. Subject <br>
 대한민국 강원도의 산불 발생 확률(0~1)을 기상, 지형, 인적 데이터를 이용하여 예측하는 프로젝트.<br>
 기상 데이터는 tabular 데이터로, 지형과 인적데이터는 image 데이터로 구성하여,<br> 멀티모달 학습방식을 사용하여 모델 학습.<br>
