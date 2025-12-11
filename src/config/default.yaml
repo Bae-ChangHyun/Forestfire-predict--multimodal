@@ -1,0 +1,170 @@
+# Default Configuration for Forestfire Prediction
+
+# Paths
+paths:
+  root: "/path/to/project"  # Override in .env
+  data: "${paths.root}/data"
+  raw_data: "${paths.data}/raw"
+  processed_data: "${paths.data}/processed"
+  models: "${paths.data}/models"
+  logs: "${paths.root}/logs"
+  checkpoints: "${paths.root}/checkpoints"
+  results: "${paths.root}/results"
+
+# Data Configuration
+data:
+  # Grid size
+  grid_height: 278
+  grid_width: 400
+
+  # Image size for CNN input
+  image_size: 64
+
+  # Features
+  climate_features:
+    - humidity
+    - rainfall
+    - temp
+    - windspeed
+
+  spatial_features:
+    - height
+    - slope
+    - ndvi
+    - landuse
+    - population_density
+
+  # Data split
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  random_seed: 42
+
+  # Class balance
+  target_balance: "auto"  # auto, oversample, undersample, smote
+
+  # Missing values
+  missing_value_indicators:
+    - 32767.0
+    - -9999.0
+  missing_value_strategy: "mask"  # mask, drop, mean, median
+
+  # Normalization
+  normalization:
+    climate: "standard"  # standard, minmax, robust
+    spatial: "minmax"
+
+# Model Configuration
+model:
+  name: "hybrid_gnn_cnn"  # cnn_multimodal, gnn, hybrid_gnn_cnn
+
+  # CNN Configuration
+  cnn:
+    backbone: "resnet"  # simple, resnet, efficientnet
+    num_filters: [32, 64, 128, 256]
+    kernel_size: 3
+    use_batch_norm: true
+    dropout_rate: 0.3
+    activation: "relu"
+
+  # GNN Configuration (for Phase 3)
+  gnn:
+    type: "gcn"  # gcn, gat, sage
+    num_layers: 3
+    hidden_dims: [256, 128, 64]
+    dropout_rate: 0.3
+    neighbor_type: "4-neighbor"  # 4-neighbor, 8-neighbor
+    aggregation: "mean"  # mean, max, sum
+
+  # Fusion Configuration
+  fusion:
+    method: "concat"  # concat, attention, bilinear, gating
+    use_cross_attention: false
+    attention_heads: 4
+
+  # Output
+  output_dim: 1
+  output_activation: "sigmoid"
+
+# Training Configuration
+training:
+  # Optimizer
+  optimizer: "adam"
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+
+  # Learning rate scheduler
+  lr_scheduler:
+    type: "reduce_on_plateau"  # step, cosine, reduce_on_plateau
+    patience: 5
+    factor: 0.5
+    min_lr: 0.000001
+
+  # Loss function
+  loss: "bce"  # bce, focal, weighted_bce
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+
+  # Training parameters
+  epochs: 100
+  batch_size: 128
+  num_workers: 4
+  pin_memory: true
+
+  # Early stopping
+  early_stopping:
+    patience: 10
+    metric: "val_auc_roc"
+    mode: "max"
+
+  # Checkpointing
+  checkpoint:
+    save_best: true
+    save_last: true
+    metric: "val_auc_roc"
+    mode: "max"
+
+  # Mixed precision
+  use_amp: false
+
+  # Gradient clipping
+  grad_clip_norm: 1.0
+
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - auc_roc
+    - auc_pr
+
+  threshold: 0.5
+
+  # Visualization
+  plot_confusion_matrix: true
+  plot_roc_curve: true
+  plot_pr_curve: true
+  plot_spatial_error: true
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_to_file: true
+  log_to_console: true
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+  # Experiment tracking
+  use_tensorboard: true
+  use_wandb: false
+  wandb_project: "forestfire-prediction"
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # auto, cpu, cuda, mps
+  gpu_ids: [0]
+  mixed_precision: false
+
+# Random Seeds
+random_seed: 42
