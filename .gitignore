@@ -206,4 +206,31 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks
-.gitignore
+
+### Project Specific ###
+# Data files
+data/ASOS_Hr/
+data/raw/
+data/modeling/model/
+data/modeling/image_data/
+data/data_set*/
+*.tif
+*.shp
+*.shx
+*.dbf
+*.cpg
+*.prj
+
+# Output files
+*.png
+*.pdf
+results/
+logs/
+checkpoints/
+
+# UV
+uv.lock
+
+# Environment
+.env.local
+secrets.yaml
