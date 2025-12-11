@@ -9,6 +9,12 @@ from .image_data import (
     crop_images_for_testing,
     convert_tif_to_npy,
 )
+from .dataset import ForestfireDataset, load_test_grid_data
+from .graph_data import (
+    GridGraphBuilder,
+    ForestfireGraphDataset,
+    create_graph_from_sample,
+)
 
 __all__ = [
     # Climate data
@@ -25,4 +31,11 @@ __all__ = [
     "crop_images_for_training",
     "crop_images_for_testing",
     "convert_tif_to_npy",
+    # Dataset
+    "ForestfireDataset",
+    "load_test_grid_data",
+    # Graph data
+    "GridGraphBuilder",
+    "ForestfireGraphDataset",
+    "create_graph_from_sample",
 ]
