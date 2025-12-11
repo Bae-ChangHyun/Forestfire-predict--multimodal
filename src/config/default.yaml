@@ -60,27 +60,42 @@ model:
 
   # CNN Configuration
   cnn:
-    backbone: "resnet"  # simple, resnet, efficientnet
+    backbone: "resnet"  # simple, resnet, attention
+    output_dim: 128  # Output dimension of each CNN branch
     num_filters: [32, 64, 128, 256]
     kernel_size: 3
     use_batch_norm: true
     dropout_rate: 0.3
     activation: "relu"
+    # Attention CNN specific
+    use_cbam: true  # For attention backbone
 
-  # GNN Configuration (for Phase 3)
+  # Climate branch (Dense layers)
+  climate:
+    hidden_dim: 64
+    num_layers: 2
+
+  # GNN Configuration
   gnn:
-    type: "gcn"  # gcn, gat, sage
+    type: "gat"  # gcn, gat, sage, residual_gcn
+    hidden_channels: 64
     num_layers: 3
-    hidden_dims: [256, 128, 64]
-    dropout_rate: 0.3
-    neighbor_type: "4-neighbor"  # 4-neighbor, 8-neighbor
-    aggregation: "mean"  # mean, max, sum
+    dropout: 0.3
+    pooling: "mean"  # mean, max, add
+    # GAT specific
+    num_heads: 4  # For GAT
+    # GraphSAGE specific
+    aggregator: "mean"  # For GraphSAGE: mean, max, lstm
+    # Graph structure
+    connectivity: "4-neighbor"  # 4-neighbor, 8-neighbor
+    include_edge_attr: true
 
   # Fusion Configuration
   fusion:
-    method: "concat"  # concat, attention, bilinear, gating
-    use_cross_attention: false
+    method: "gating"  # concat, attention, gating
+    use_cross_attention: true
     attention_heads: 4
+    hidden_dim: 128
 
   # Output
   output_dim: 1
