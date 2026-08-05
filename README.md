@@ -1,10 +1,10 @@
 # Multimodal Forestfire Prediction
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBae-ChangHyun%2FForestfire-predict%2Fblob%2Fmain%2FREADME.md&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) <br>
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/Bae-ChangHyun/Forestfire-predict--multimodal">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/Changroro/Forestfire-predict--multimodal">
 
 개발기간: `2023.05 ~ 2023.11` (초기 버전) | `2024.12 ~` (리팩토링 및 개선)
 
-Wiki: [Wiki](https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/wiki)
+Wiki: [Wiki](https://github.com/Changroro/Forestfire-predict--multimodal/wiki)
 
 ## 📌 Overview
 
@@ -72,7 +72,7 @@ Multimodal-Forestfire-prediction/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Bae-ChangHyun/Multimodal-Forestfire-prediction.git
+git clone https://github.com/Changroro/Multimodal-Forestfire-prediction.git
 cd Multimodal-Forestfire-prediction
 ```
 
@@ -193,7 +193,7 @@ uv run python scripts/predict.py \
 
 좌측: 국가산불위험예보시스템 | 우측: 프로젝트 산출물
 
-<img src="https://github.com/Bae-ChangHyun/Forestfire-predict--multimodal/assets/48899047/a5336b36-6114-4da3-9316-51624fac2c19.png"  width="600" height="300"/>
+<img src="https://github.com/Changroro/Forestfire-predict--multimodal/assets/48899047/a5336b36-6114-4da3-9316-51624fac2c19.png"  width="600" height="300"/>
 
 
 ## 📚 Tech Stack
@@ -265,7 +265,7 @@ If you use this code for your research, please cite:
   title = {Multimodal Forestfire Prediction},
   year = {2023-2024},
   publisher = {GitHub},
-  url = {https://github.com/Bae-ChangHyun/Multimodal-Forestfire-prediction}
+  url = {https://github.com/Changroro/Multimodal-Forestfire-prediction}
 }
 ```
 
@@ -277,4 +277,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Author: Bae ChangHyun
 - Blog: [changsroad.tistory.com](https://changsroad.tistory.com)
-- Issues: [GitHub Issues](https://github.com/Bae-ChangHyun/Multimodal-Forestfire-prediction/issues)
+- Issues: [GitHub Issues](https://github.com/Changroro/Multimodal-Forestfire-prediction/issues)
